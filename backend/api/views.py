@@ -8,6 +8,6 @@ from .models import Posts
 def main(request):
 	return HttpResponse('sup bitchs')
 	
-class PostsView(generics.CreateAPIView):
+class PostsView(generics.ListAPIView):
 	queryset = Posts.objects.all()
 	serializer_class = PostSerializer
